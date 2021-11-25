@@ -15,7 +15,7 @@ class CacheAspect
     public function around(ProceedingJoinPoint $pointer): mixed
     {
         /** @var CacheAttribute $cacheAttribute */
-        $cacheAttribute = $pointer->getAttributeInstances();
+        [$cacheAttribute] = $pointer->getAttributeInstances();
 
         return Cache::remember($cacheAttribute->key, $cacheAttribute->ttl, fn() => $pointer->process());
     }
