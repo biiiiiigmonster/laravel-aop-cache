@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "biiiiiigmonster/php8-aop": "0.*"
+        "biiiiiigmonster/laravel-aop": "0.*"
     },
     "autoload": {
         "psr-4": {
